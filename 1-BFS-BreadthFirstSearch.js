@@ -1,3 +1,76 @@
+//Tree Traversal
+
+//BREADTH FIRST SEARCH
+//-> 
+//->
+//searching everything on the same level First
+//working horizontally
+
+
+
+//BREADTH FIRST SEARCH
+//      10 //root
+//    6     15
+//  3   8       20
+
+//1. while there's something in the queue, take it out and put it in the visitedNode.
+//2. then check the tree if there's anything left. //3. yes, there is 6. Add the 6 in the queue now. 
+
+
+//queue:[10]
+//visitedNode: []
+
+//queue:[]
+//visitedNode: [10]
+
+
+//queue:[6]
+//visitedNode: [10]
+
+
+//queue:[6, 15]
+//visitedNode: [10]
+
+
+//now to the next level
+//queue:[15]
+//visitedNode: [10, 6]
+
+
+//queue:[15, 3]
+//visitedNode: [10, 6]
+
+
+//queue:[15, 3, 8]
+//visitedNode: [10, 6]
+//done with 6
+
+//queue:[3, 8]
+//visitedNode: [10, 6, 15]
+
+
+//queue:[3, 8, 20]
+//visitedNode: [10, 6, 15]
+
+
+//queue:[8, 20]
+//visitedNode: [10, 6, 15, 3]
+
+//queue:[20]
+//visitedNode: [10, 6, 15, 3, 8]
+
+//queue:[]
+//visitedNode: [10, 6, 15, 3, 8, 20]
+
+
+// 1. Create a queueArr and a var to store the value of node visited. 
+// 2. place that root node in the queue 
+// 3. loop as long as there is anything in the queue
+//   3-1 dequeue a node from the queue and push the value of the node into the var that stores the nodes. 
+//   3-2 if there is a left property on the node dequeued - add it to the queue 
+//   3-3 if there is a right property on the node dequeued - add it to the queue 
+// 4. return the variable that stores the value
+
 class Node {
     constructor(value){
         this.value = value;
