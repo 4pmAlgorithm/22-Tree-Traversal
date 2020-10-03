@@ -14,7 +14,8 @@
 //  3   8       20
 
 //1. while there's something in the queue, take it out and put it in the visitedNode.
-//2. then check the tree if there's anything left. //3. yes, there is 6. Add the 6 in the queue now. 
+//2. then check the tree if there's anything left. 
+//3. yes, there is 6. Add the 6 in the queue now. 
 
 
 //queue:[10]
